@@ -131,3 +131,5 @@ To view dependency trees
 gradle dependencies # or
 gradle :kafka-connect-cassandra:dependencies
 ```
+
+TEST
