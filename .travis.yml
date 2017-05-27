@@ -2,7 +2,7 @@ language: scala
 scala: 2.11.7
 jdk: oraclejdk8
 before_script: ulimit -u 30000
-script: gradle :kafka-connect-hbase:assemble
+script: gradle :kafka-connect-hbase:fatJar
 notifications:
   slack: datamountaineers:gpg5e7VabFjAT1gQZqwxgsqP
 deploy:
@@ -10,6 +10,7 @@ deploy:
   region: eu-west-1
   bucket: hj-travis-stream-reactor
   skip_cleanup: true
+  local_dir: kafka-connect-hbase/build
   access_key_id:
     secure: gVI//aD/pBcbnRTGcmCkgCw5Hts7bX5lQt4a8bhcNfEGzbMBNuUy+mYb1c2T0X6ixRidqb+gSz52VscmY6HvVKkBURYBtN2EyO2ByX+bwo29g1Z1hURfyWNXJysPdwhX8FryOe38TRaT8H0YUwBSmUAQsiVhWTAP08s+8mXJg2gl5N+lRABWpWtSjd/3XQgYpTm+fGA/3Gc9Fmvf2J0lWd4GqHavaheaMTAKv8cFNFwxz/IdQBiD7uthQKHbPllGeJbLGhdqYPaPw/CkaAaRqqlfoibUVrHCYxxXtJT7Q9cp109SG9Odzb0UR57ym1NYkPP1kXCnM9/l2gINhvGmVbSXgWp6FMNmW5ZPcwS3uoqz2asX7+mGQOYjf0p9yRD5etFsH9Rkde0iLj2n3+19ORfqHDCdJ07zZR+9Rj+JqM0AHezkJib5S7p+TLZmMU0039SxRhGL0sCJ+G6ARGeRU8EDzT5lIN46YLeO+QT8GNfIChnUSgPZD9tq56Hl6QSMDa34awyg1dITRZhNChyvk3OP7QldJAoHqbi3fCCXieY1TSQpdsItgNFbUOf0fKuMnIE7JEgqD1zyJSR88wsHxFoECDJ95XsONmNjvN3BWsmrFxORt6JdnMb07+RHcz5yHoz8QMbzLSoBi9TPf1d+GyhakLuW5JLeM3Ragx644BU=
   secret_access_key:
