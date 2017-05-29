@@ -145,9 +145,6 @@ allprojects {
         compile files("libs/kcql-1.0.4-all.jar") {
             exclude group: "com.google.guava", module: "guava"
         }
-        compile("com.datamountaineer:kcql:$dataMountaineerKCQLVersion") {
-            exclude group: "com.google.guava", module: "guava"
-        }
         compile("com.datamountaineer:kafka-connect-common:$dataMountaineerCommonVersion")
 
         compile "org.apache.kafka:connect-json:$kafkaVersion"
