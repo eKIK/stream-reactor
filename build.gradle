@@ -142,9 +142,7 @@ allprojects {
         compile "org.scala-lang:scala-library:$scala"
         compile "org.scala-lang:scala-compiler:$scala"
         compile "com.typesafe.scala-logging:scala-logging-slf4j_$scalaMajorVersion:$scalaLoggingVersion"
-        compile files("libs/kcql-1.0.4-all.jar") {
-            exclude group: "com.google.guava", module: "guava"
-        }
+        compile files("libs/kcql-1.0.4-all.jar")
         compile("com.datamountaineer:kafka-connect-common:$dataMountaineerCommonVersion")
 
         compile "org.apache.kafka:connect-json:$kafkaVersion"
