@@ -71,7 +71,6 @@ allprojects {
         json4sVersion = "3.3.0"
         kiteMiniClusterVersion = "1.1.0"
         gsonVersion = "2.6.2"
-        dataMountaineerKCQLVersion = "1.0.4"
         akkaVersion = "2.4.10"
         connectCLIVersion = "1.0.1"
 
@@ -143,6 +142,9 @@ allprojects {
         compile "org.scala-lang:scala-library:$scala"
         compile "org.scala-lang:scala-compiler:$scala"
         compile "com.typesafe.scala-logging:scala-logging-slf4j_$scalaMajorVersion:$scalaLoggingVersion"
+        compile files("libs/kcql-1.0.4-all.jar") {
+            exclude group: "com.google.guava", module: "guava"
+        }
         compile("com.datamountaineer:kcql:$dataMountaineerKCQLVersion") {
             exclude group: "com.google.guava", module: "guava"
         }
