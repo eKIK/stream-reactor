@@ -6,8 +6,6 @@ before_install:
  - chmod +x gradlew
 script: ./gradlew :kafka-connect-hbase:fatJar -x test
 sudo: required
-notifications:
-  slack: datamountaineers:gpg5e7VabFjAT1gQZqwxgsqP
 deploy:
   provider: s3
   region: eu-west-1
