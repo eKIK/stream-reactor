@@ -14,24 +14,4 @@
  * limitations under the License.
  */
 
-include 'kafka-connect-bloomberg',
-        'kafka-connect-elastic',
-        'kafka-connect-elastic5',
-        'kafka-connect-druid',
-        'kafka-connect-kudu',
-        'kafka-connect-cassandra',
-        'kafka-connect-yahoo',
-        'kafka-connect-hbase',
-        'kafka-connect-redis',
-        'kafka-connect-rethink',
-        'kafka-connect-jms',
-        'kafka-connect-influxdb',
-        'kafka-connect-hazelcast',
-        'kafka-connect-voltdb',
-        'kafka-connect-blockchain',
-        'kafka-connect-mongodb',
-        'kafka-connect-mqtt',
-        'kafka-connect-coap',
-        'kafka-connect-ftp',
-        'kafka-connect-azure-documentdb',
-        'kafka-connect-temp'
+include 'kafka-connect-hbase'
