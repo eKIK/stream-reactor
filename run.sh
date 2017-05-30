@@ -460,7 +460,7 @@ export TRAVIS_BUILD_NUMBER=''
 export TRAVIS_BUILD_DIR=$HOME/build/eKIK/stream-reactor
 export TRAVIS_JOB_ID=''
 export TRAVIS_JOB_NUMBER=''
-export TRAVIS_BRANCH='master'
+export TRAVIS_BRANCH=''
 export TRAVIS_COMMIT=''
 export TRAVIS_COMMIT_MESSAGE=$(git log --format=%B -n 1)
 export TRAVIS_COMMIT_RANGE=''
@@ -570,7 +570,7 @@ travis_fold end before_script
 EOFUNC_BEFORE_SCRIPT
 cat <<'EOFUNC_SCRIPT' >>$HOME/.travis/job_stages
 function travis_run_script() {
-travis_cmd gradle\ fatJar\ -x\ test --echo --timing
+travis_cmd gradle\ :kafka-connect-hbase:fatJar\ -x\ test --echo --timing
 travis_result $?
 :
 }
